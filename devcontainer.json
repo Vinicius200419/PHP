@@ -3,20 +3,26 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
+  "features": {
+    "ghcr.io/devcontainers/features/postgres:1": {
+      "version": "15",
+      "password": "your_secure_password"
+    }
+  },
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash",
     "php.validate.executablePath": "/usr/bin/php"
   },
   "extensions": [
-    "felixfbecker.php-debug",        // Extensão para depuração PHP
-    "ms-vscode.php-intellisense",    // Intellisense para PHP
-    "xdebug.php-debugger"            // Extensão para Xdebug
+    "felixfbecker.php-debug",
+    "ms-vscode.php-intellisense",
+    "xdebug.php-debugger"
   ],
-  "postCreateCommand": "composer install",   // Comando para instalar dependências PHP, por exemplo
+  "postCreateCommand": "composer install",
   "remoteUser": "vscode",
-  "forwardPorts": [8080], // Se você tiver um servidor local, como Apache ou PHP embutido
+  "forwardPorts": [8080, 5432], // Inclua a porta 5432 para PostgreSQL
   "workspaceFolder": "/workspace",
   "mounts": [
-    "source=/path/to/your/project,target=/workspace,type=bind" // Se for necessário montar volumes
+    "source=/path/to/your/project,target=/workspace,type=bind"
   ]
 }
