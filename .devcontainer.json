@@ -1,0 +1,22 @@
+{
+  "name": "PHP Development Environment",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "php.validate.executablePath": "/usr/bin/php"
+  },
+  "extensions": [
+    "felixfbecker.php-debug",        // Extensão para depuração PHP
+    "ms-vscode.php-intellisense",    // Intellisense para PHP
+    "xdebug.php-debugger"            // Extensão para Xdebug
+  ],
+  "postCreateCommand": "composer install",   // Comando para instalar dependências PHP, por exemplo
+  "remoteUser": "vscode",
+  "forwardPorts": [8080], // Se você tiver um servidor local, como Apache ou PHP embutido
+  "workspaceFolder": "/workspace",
+  "mounts": [
+    "source=/path/to/your/project,target=/workspace,type=bind" // Se for necessário montar volumes
+  ]
+}
