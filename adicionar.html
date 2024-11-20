@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas Simples</title>
+    <link rel="stylesheet"  href="comum.css">
+    <link rel="stylesheet"  href="adicionar.css">
+  </head>
+<body>
+  <header>
+    
+    <div class="cima">
+    <div class="logo">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhEb-1nCKwnMjv3_jp6566LYED37_JnkUlkw&s" alt="logo">
+    </div>
+    
+    <nav class="navbar">
+    <form action="#" class="search-form" method="get">
+        <input type="text" name="search-form" id="search-form" placeholder="Buscar receitas..." />
+        <button type="submit">Buscar</button>
+      </form>
+      </nav>
+      
+        <div class="user-icon">
+        <a href="user-icon.html">
+          <img src="https://icons.iconarchive.com/icons/fa-team/fontawesome/256/FontAwesome-Circle-User-icon.png" alt="user-icon">
+        </a>
+      </div>
+      
+      </nav>
+    <a href="adicionar.html" class="adicionar-btn">Adicionar novas receitas</a>
+    </nav>
+    </div>
+    
+    <hr>
+    
+      <div class="baixo">
+      <div class="menu-categorias">
+        <a href="carnes.html" class="categoria-btn">Carnes</a>
+        <a href="bolos.html" class="categoria-btn">Bolos e Tortas</a>
+        <a href="aves.html" class="categoria-btn">Aves</a>
+        <a href="lanches.html" class="categoria-btn">Lanches</a>
+        <a href="peixes.html" class="categoria-btn">Peixes e Frutos do Mar</a>
+        <a href="docesobremesas.html" class="categoria-btn">Doces e Sobremesas</a>
+        <a href="massas.html" class="categoria-btn">Massas</a>
+      </div>
+      </div>
+      
+      
+      </header>
+    
+      <main>
+      <hr>
+      <h1>Receitas Simples</h1>
+      <hr>
+      <section class="section">
+<h2>Adicionar novas receitas</h2>
+      <form action="adicionar.html" method="get">
+        
+                <div class="nome">
+                <label for="nome">Nome da Receita:</label>
+                <input type="text" id="nome" name="nome" required><br>
+                <br>
+                </div>
+                
+                <label for="tempo">Tempo de Preparo(em minutos):</label>
+                <input type="number" id="tempo" name="tempo" min="1" required><br>
+                <br>
+                
+                <h3>Porções</h3>
+                <label for="serve">Serve até:</label>
+                <input type="number" id="serve" name="serve" min="1" required><br>
+                <br>
+                 
+                <h3>Dificuldade</h3>
+                <label for="dificuldade"></label>
+                <select id="dificuldade" name="dificuldade" required>
+                  <option value="facil">Fácil</option>
+                  <option value="medio">Médio</option>
+                  <option value="dificil">Difícil</option>
+                </select><br>
+                <br>
+                
+                <label for="image">Foto da Receita:</label>
+                <input type="file" id="image" name="image" accept="image/*" required><br>
+                <br>
+                
+                <h3>Ingredientes:</h3>
+                <label for="ingredientes"></label><br>
+                <textarea id="ingredientes" name="ingredientes" rows="12" cols="70" placeholder="Digite os ingredientes..." required></textarea><br>
+                <br>
+                
+                <h3>Modo de Preparo:</h3>
+                <label for="preparo"></label><br>
+                <textarea id="preparo" name="preparo" rows="25" cols="80" placeholder="Digite o modo de preparo..." required></textarea><br>
+            
+                <button type="submit">Adicionar Receita</button>
+            </form>
+            <hr>
+            </section>
+            </main>
+  </body>
+  
+  <footer>
+    <p>&copy; 2024 - Receitas Simples</p>
+  </footer>
+  
+</body>
+</html> 
